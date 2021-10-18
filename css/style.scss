@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.first{
+    height: 100vh;
+    .main-menu{
+        height: 74px;
+     
+        ul.menu{
+            li.close a{
+                display: none;
+            }
+            li{
+                display: inline-block;
+                padding: 5px;
+                a{
+                    text-decoration: none;
+                    color: #000;
+                    font-size: 0.875rem;
+                    font-family: 'Noto Sans', sans-serif; 
+                    padding: 8px;
+                    &:hover{
+                        background-color: #000;
+                        color: #fff;
+                    }
+                }
+                
+            }
+            
+        }
+    }
+    .row{
+        height: 100%;
+        .col-md-4{
+            height: calc(100%-74px);
+            h4{
+                font-size: 1.5rem;
+               
+            }
+            h1{
+                font-size: 2.5rem;
+                margin-bottom: 5.5rem !important;
+            }
+            p{
+                font-size: 0.875rem;
+                color: #6c757d !important;
+            }
+            
+            .elem{
+                display: grid;
+                grid-template-columns: repeat(5,1fr);
+                grid-gap: 5%;
+                .item{
+                    button{
+                        border:1px solid #ccc !important;
+                        border-radius: 50% !important;
+                        width:100% !important;
+                        padding-top:100% !important;
+                        cursor: pointer;
+                    }
+                    .title{
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+@media screen and (max-width:794px) {
+    .main-menu{
+        display: none;
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background-color: rgb(0,0,0,0.5);
+        left: 0;
+        top:0;
+        z-index: 9999;
+        .close{
+            display: block !important;
+        }
+    }
+    
+    ul.menu{
+        display: block !important;
+        right:0;
+        top:0;
+        position: fixed;
+        width: 300px;
+        height: 100vh;
+        background-color: #fff;
+        padding:10px
+           
+    }
+    .close{
+        display: flex !important;
+        justify-content: flex-end;
+    }
+    .close>a:hover{
+        color:#fff !important;
+    }
+    .menu li{
+        margin:10px 0;
+    }
+    .menu a:not(.close>a){
+        display: block;
+        background-color: whitesmoke;
+        padding:10px;
+    }
+    .menu a:hover:not(.close>a){
+        background-color: whitesmoke !important;
+        color:#000 !important;
+    }
+    
+}
+.elem{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 10%;
+}
+.elem button{
+    border:1px solid #ccc;
+    border-radius: 50%;
+    width:100%;
+    padding-top:100%;
+    cursor: pointer;
+}

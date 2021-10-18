@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+body{
+  height: 100vh;
+}
+.first {
+  height: 100vh;
+}
+
+.first .main-menu {
+  height: 74px;
+}
+
+.first .main-menu ul.menu li.close a {
+  display: none;
+}
+
+.first .main-menu ul.menu li {
+  display: inline-block;
+  padding: 5px;
+}
+
+.first .main-menu ul.menu li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 0.875rem;
+  font-family: 'Noto Sans', sans-serif;
+  padding: 8px;
+}
+
+.first .main-menu ul.menu li a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.first .row{
+  height: 100%;
+}
+
+.first .row .col-md-4 {
+  height: calc(100% - 74px);
+ 
+}
+
+.first .row .col-md-4 h4 {
+  font-size: 1.5rem;
+}
+
+.first .row .col-md-4 h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1vh !important;
+}
+
+.first .row .col-md-4 p {
+  font-size: 0.875rem;
+  color: #6c757d !important;
+}
+
+.first .row .col-md-4 .elem {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  grid-gap: 12%;
+}
+
+.first .row .col-md-4 .elem .item button {
+  border: 1px solid #ccc !important;
+  border-radius: 50% !important;
+  width: 100% !important;
+  padding-top: 100% !important;
+  cursor: pointer;
+}
+
+.first .row .col-md-4 .elem .item .title {
+  font-size: 0.8rem;
+}
+/*# sourceMappingURL=style.css.map */
+input{
+  display: none;
+}
+.buttons .mob{
+  display: none;
+}
+
+    @media screen and (max-width:950px) {
+
+      .main-menu{
+        display: none;
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background-color: rgba(233, 227, 227, 0.5);
+        left: 0;
+        top:0;
+        z-index: 9999;
+    }
+    .buttons .mob{
+      display: block;
+    }
+    #mobile{
+        display: block !important;
+    }
+    li.close{
+      display: flex;
+      justify-content: flex-end;
+    }
+    li.close a{
+        display: flex !important;
+        justify-content: center;
+        background-color: red;
+        color: #fff !important;
+        font-size: 2rem !important;
+        width: 49px;
+        padding: 0px !important;
+    }
+    input{
+      display: none;
+    }
+    .close>a:hover{
+        color:#fff !important;
+    }
+    .menu{
+      display: none;
+    }
+    
+    #close:checked + .menu{
+      display: block !important;
+      right:0;
+      top:0;
+      position: fixed;
+      width: 300px;
+      height: 100vh;
+      background-color: #fff;
+      padding:10px;
+      z-index: 9999;
+      height: 100vh;
+  
+    }
+    .menu li{
+      display: block !important;
+      width: 90%;
+        margin:10px 0;
+    }
+    .first .row .col-md-4 .elem {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: (1fr)[5];
+          grid-template-columns: repeat(4, 1fr);
+      grid-gap: 12%;
+    }
+
+    .menu li a:not(.close>a){
+        display: block;
+        background-color: whitesmoke;
+        padding:10px;
+    }
+    .menu a:hover:not(.close>a){
+        background-color: whitesmoke !important;
+        color:#000 !important;
+    }
+    
+    .close>a{
+      padding: 0px !important;
+    }
+    .close a>i{
+      padding-left: 0px !important;
+      padding-right: 5px !important;
+    }
+   
+  
